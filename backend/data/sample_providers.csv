@@ -1,0 +1,7 @@
+npi,entity_type,organization_name,first_name,last_name,middle_name,credential,address_line_1,address_line_2,city,state,postal_code,phone,taxonomy_code,taxonomy_description,license_number,license_state,official_first_name,official_last_name,status,enumeration_date
+1234567893,Individual,,Sarah,Chen,M,MD,123 Main St,Suite 200,Austin,TX,78701,512-555-0101,207Q00000X,Family Medicine,TX12345,TX,,,Active,2015-03-12
+1467890129,Individual,,James,Rodriguez,,DO,456 Oak Ave,,Dallas,TX,75201,214-555-0102,208D00000X,General Practice,TX54321,TX,,,Active,2012-07-01
+1922222223,Organization,Austin Community Health Clinic,,,,,789 Elm St,,Austin,TX,78702,512-555-0103,261QP2300X,Primary Care Clinic,,,Maria,Lopez,Active,2010-01-15
+1841293081,Individual,,Emily,Nguyen,R,NP,321 Cedar Blvd,,Houston,TX,77002,713-555-0104,363L00000X,Nurse Practitioner,TX98765,TX,,,Active,2018-09-20
+1174006647,Individual,,Michael,Patel,,MD,55 River Rd,Suite 4,San Antonio,TX,78205,210-555-0105,207RC0000X,Cardiovascular Disease,TX11223,TX,,,Deactivated,2008-05-05
+3456789015,Individual,,Lockhart,Smith,,MD,,,,,,,207Q00000X,Family Medicine,TX77821,TX,,,Active,2016-04-02

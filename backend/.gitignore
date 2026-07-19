@@ -1,0 +1,6 @@
+node_modules/
+npi.db
+npi.db-journal
+npi.db-wal
+npi.db-shm
+.env

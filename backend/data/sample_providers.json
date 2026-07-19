@@ -1,0 +1,36 @@
+[
+  {
+    "npi": "1234567893",
+    "entity_type": "Individual",
+    "first_name": "Sarah",
+    "last_name": "Chen",
+    "middle_name": "M",
+    "credential": "MD",
+    "address_line_1": "123 Main St",
+    "address_line_2": "Suite 200",
+    "city": "Austin",
+    "state": "TX",
+    "postal_code": "78701",
+    "phone": "512-555-0101",
+    "taxonomy_code": "207Q00000X",
+    "taxonomy_description": "Family Medicine",
+    "license_number": "TX12345",
+    "license_state": "TX",
+    "status": "Active",
+    "enumeration_date": "2015-03-12"
+  },
+  {
+    "npi": "1922222226",
+    "entity_type": "Organization",
+    "organization_name": "Austin Community Health Clinic",
+    "address_line_1": "789 Elm St",
+    "city": "Austin",
+    "state": "TX",
+    "postal_code": "78702",
+    "phone": "512-555-0103",
+    "taxonomy_code": "261QP2300X",
+    "taxonomy_description": "Primary Care Clinic",
+    "status": "Active",
+    "enumeration_date": "2010-01-15"
+  }
+]
