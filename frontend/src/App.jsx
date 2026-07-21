@@ -2,11 +2,11 @@ import React, { useEffect, useState, useCallback } from "react";
 import { api } from "./api";
 import SearchForm from "./components/SearchForm";
 import ResultsList from "./components/ResultsList";
-import NppesPage from "./pages/NppesPage";
-import DownloadsPage from "./pages/DownloadsPage";
-import ApiPage from "./pages/ApiPage";
-import HelpPage from "./pages/HelpPage";
-import ProviderView from "./pages/ProviderView";
+import NppesPage from "./Pages/NppesPage";
+import DownloadsPage from "./Pages/DownloadsPage";
+import ApiPage from "./Pages/ApiPage";
+import HelpPage from "./Pages/HelpPage";
+import ProviderView from "./Pages/ProviderView";
 
 const EMPTY_FILTERS = {
   npi: "", entity_type: "", taxonomy_description: "",
