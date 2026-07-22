@@ -11,6 +11,7 @@ export default function NppesPage() {
       <h1 className="page-title">NPPES</h1>
 
       <div className="two-col">
+        <div className="colin">
         <div className="col">
           <h2 style={{ fontSize: "1.3rem" }}>Registered User Sign In</h2>
           <p>Log in to view/update your National Provider Identifier (NPI) record.</p>
@@ -29,7 +30,7 @@ export default function NppesPage() {
             I agree to the <a href="#">Terms and Conditions</a>
           </label>
 
-          <button className="primary" disabled style={{ marginTop: "1rem", opacity: 0.6, cursor: "not-allowed" }}>
+          <button className="primary-t" disabled style={{ marginTop: "1rem", opacity: 0.6, cursor: "not-allowed" }}>
             SIGN IN
           </button>
           <p style={{ marginTop: "0.75rem" }}><a href="#">FORGOT USER ID or PASSWORD?</a></p>
@@ -38,7 +39,7 @@ export default function NppesPage() {
             while the application retrieves all NPPES profile related information.
           </p>
         </div>
-
+            </div>
         <div className="col">
           <h2 style={{ fontSize: "1.3rem" }}>Create or Manage an Account</h2>
           <p>You need an Identity &amp; Access Management System (I&amp;A) account to log into NPPES.</p>

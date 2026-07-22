@@ -119,7 +119,7 @@ export default function ProviderView({ provider, onHome, onBackToResults, onChan
           <tr><td>Other Identifiers</td><td style={{ color: "#8a8f96" }}>Not tracked</td></tr>
         </tbody>
       </table>
-
+       
       <h3 className="section-heading" style={{ marginTop: "1.5rem" }}>Taxonomy</h3>
       <table className="detail-table">
         <thead><tr><th>Taxonomy</th><th>State</th><th>primary Taxonomy</th><th>Selected Taxonomy</th><th>License Number</th></tr></thead>

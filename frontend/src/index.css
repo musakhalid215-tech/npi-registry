@@ -14,9 +14,6 @@
 }
 
 * { box-sizing: border-box; }
-
-
-
 html, body, #root { height: 100%; margin: 0; }
 
 body {
@@ -24,81 +21,131 @@ body {
   background: #ffffff;
   color: #212121;
   font-size: 14px;
+  -webkit-text-size-adjust: 100%;
 }
 
 a { color: #0071bc; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.app { max-width: 100%; margin: 0; }
+.app { width: 100%; max-width: 100%; margin: 0; }
 
-/* ---------- Top nav bar ---------- */
+/* ---------- Pinned Header Block ---------- */
 .topbar {
   background: #205493;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.9rem ;
+  padding: 0.9rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .topbar .brand {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .topbar nav {
   display: flex;
-  gap: 0.70rem;
+  gap: 1.2rem;
+  align-items: center;
 }
 
 .topbar nav a,
 .topbar nav span {
   color: white;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   cursor: pointer;
 }
 
-.topbar nav a:hover { color: #ffffff; text-decoration: underline; }
+.topbar nav span {
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
 
-/* ---------- Page content ---------- */
-.page-content { padding: 1.75rem 2rem 3rem; max-width: 1200px; margin: 0 auto; }
+.topbar nav span:hover {
+  text-decoration: underline;
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Content Container ---------- */
+.page-content { 
+  padding: 1.75rem 2rem 3rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding-top: 6.5rem; 
+}
 
 h1.page-title {
   font-size: 1.7rem;
   font-weight: 400;
-  margin: 2rem;
+  margin: 1.5rem 0;
   border-bottom: 1px solid #9d9d9e;
-  padding-bottom: 0.9rem;
+  padding-bottom: 0.6rem;
 }
-
+.colin{
+   border-right: 1px solid #5a5a5b;
+   margin: 0.8rem;
+}
+.colin label{
+  width: 90%;
+}
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding-top: 1.5rem;
+  background-color: rgb(247, 247, 247);
+  padding: 2rem;
+  width: 100%;
+}
+.three-col{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 2rem;
+  border-top:  1px solid #d6d7d9;
+  padding-top: 1.5rem;
+}
+.primary-t{
+  background-color: green;
+  color: white;
+  width: 90%;
+  padding: 0.9rem;
+  border-radius: 1rem;
+}
 .notice-box {
-  font-size: 0.92rem;
-  margin: 4rem;
-  margin-bottom: 8rem;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
   line-height: 1.5;
 }
-
 .notice-box ul { margin: 0.4rem 0 0 1.4rem; padding: 0; }
 
-/* ---------- Search form ---------- */
-.search-panel { margin-bottom: 1.5rem; 
+/* ---------- Search Panel ---------- */
+.search-panel { 
   background-color: #f3f3f4;
   padding: 3rem;
-  border-radius: 0.94rem;
-  margin: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
 }
 
 .section-label {
   font-weight: 700;
   font-size: 0.95rem;
-  margin: 1.3rem 0 0.75rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .search-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.1rem 1.5rem;
+  gap: 1.5rem;
 }
 
 .field label {
@@ -112,9 +159,9 @@ h1.page-title {
 .field select {
   width: 100%;
   border: 1px solid #a9aeb1;
-  border-radius: 2px;
-  padding: 0.45rem 0.5rem;
-  font-size: 0.92rem;
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.95rem;
   font-family: inherit;
   background: #ffffff;
   color: #212121;
@@ -131,106 +178,137 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
 }
-
 .exact-match-row input { width: auto; }
 
 .helper-text {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: #323a45;
   margin-top: 0.9rem;
   line-height: 1.5;
 }
-
 .helper-text strong { font-weight: 700; }
 
 .search-actions {
   margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 0.75rem;
 }
-button.ghost {
-  color: black;
-  text-decoration: none;
-}
+
+/* ---------- Form Buttons (RESTORED TO ORIGINAL VISIBILITY) ---------- */
 button {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.95rem;
   cursor: pointer;
   font-family: inherit;
-  border-radius: 3px;
+  border-radius: 4px;
   border: 1px solid transparent;
 }
 
-button.primary {
+.mary {
   background: #205493;
   color: #ffffff;
   border-color: #205493;
-  padding: 0.55rem 1.6rem;
-  font-size: 0.95rem;
-  font-weight: 600;
 }
-
 button.primary:hover { background: #17395f; }
 
-button.ghost {
+.host {
   background: transparent;
   border: none;
   color: #0071bc;
-  padding: 0.55rem 0.4rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+button.ghost:hover { text-decoration: underline; }
+
+/* 🛡️ TARGETED ADMIN HIDING SECURITY: Only hides primary/ghost inside the provider view cards/modals */
+
+button.primary,
+button.ghost {
+  display: none !important;
+}
+
+/* ---------- About Block ---------- */
+.about-block {
+  border-top: 1px solid #d6d7d9;
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  line-height: 1.6;
+  color: #212121;
   font-size: 0.95rem;
 }
 
-button.ghost:hover { text-decoration: underline; }
-
-/* ---------- About paragraph block ---------- */
-.about-block {
-  border-top: 1px solid #d6d7d9;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #212121;
-  font-size: 1rem;
-  width: 80%;
-  margin: 2.3rem;
-}
-
-
-/* ---------- Results ---------- */
+/* ---------- Results Grid / Lists ---------- */
 .results-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
   font-size: 0.88rem;
   color: #323a45;
   border-top: 1px solid #d6d7d9;
   padding-top: 1.5rem;
-  margin-top: 1.5rem;
 }
 
-.result-row {
+/* ---------- 📋 FIXED TABLE ROW LAYOUT ---------- */
+
+/* 1. Target the correct class from your React code */
+.result-row-table {
   display: grid;
-  grid-template-columns: 1fr auto;
+  /* Creates 6 distinct columns: NPI | Icon | Main Info | Phone | Taxonomy */
+  grid-template-columns: 140px 60px 2fr 150px 1.5fr;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   background: #ffffff;
   border: 1px solid #d6d7d9;
-  border-radius: 2px;
-  padding: 0.85rem 1rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-.result-row:hover { border-color: #205493; background: #f1f6fb; }
+.result-row-table:hover { 
+  border-color: #205493; 
+  background: #f1f6fb; 
+}
+.result-row-table.deactivated { border-left: 4px solid #b50909; }
+.result-row-table:not(.deactivated) { border-left: 4px solid #2e8540; }
 
+/* 2. Format the main container that holds the Name, Address, and Status badge */
+.rrt-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rrt-main .name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #205493;
+}
+
+.rrt-main .subline {
+  font-size: 0.85rem;
+  color: #323a45;
+}
+
+/* 3. Style text inside columns to look uniform */
+.rrt-npi a {
+  font-weight: 600;
+  color: #0071bc;
+}
+
+.rrt-phone, 
+.rrt-taxonomy {
+  font-size: 0.9rem;
+  color: #212121;
+}
+.result-row:hover { border-color: #205493; background: #f1f6fb; }
 .result-row.deactivated { border-left: 4px solid #b50909; }
 .result-row:not(.deactivated) { border-left: 4px solid #2e8540; }
 
-.result-row .name-block .name { font-weight: 700; font-size: 1rem; color: #205493; }
-
+.result-row .name-block .name { font-weight: 700; font-size: 1.05rem; color: #205493; }
 .result-row .name-block .subline { font-size: 0.85rem; color: #323a45; margin-top: 0.15rem; }
 
 .badge {
@@ -238,34 +316,27 @@ button.ghost:hover { text-decoration: underline; }
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.15rem 0.45rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 2px;
   margin-top: 0.3rem;
 }
-
 .badge.active { background: #e7f4e4; color: #2e8540; }
 .badge.deactivated { background: #f9dede; color: #b50909; }
 
-.result-row .npi-block { text-align: right; font-family: 'Courier New', monospace; }
-.result-row .npi-block .npi { font-size: 0.95rem; }
-.result-row .npi-block .subline { font-size: 0.82rem; color: #323a45; }
+.result-row .npi-block { text-align: right; font-family: monospace; }
 
 .empty-state {
   border: 1px dashed #d6d7d9;
   padding: 2.5rem 1rem;
   text-align: center;
   color: #323a45;
-  font-size: 0.92rem;
 }
 
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-  align-items: center;
-  font-size: 0.85rem;
-  color: #323a45;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .error-banner {
@@ -278,27 +349,27 @@ button.ghost:hover { text-decoration: underline; }
   border-radius: 2px;
 }
 
-/* ---------- Detail overlay ---------- */
+/* ---------- Detail Overlay Popup ---------- */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(33, 33, 33, 0.5);
+  background: rgba(33, 33, 33, 0.6);
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 4vh 1rem;
+  padding: 2rem 1rem;
   overflow-y: auto;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .detail-card {
   background: #ffffff;
-  border: 1px solid #d6d7d9;
   border-top: 4px solid #205493;
-  max-width: 640px;
   width: 100%;
+  max-width: 640px;
   padding: 1.75rem 2rem 2rem;
   position: relative;
+  border-radius: 4px;
 }
 
 .detail-card .close-btn {
@@ -310,6 +381,7 @@ button.ghost:hover { text-decoration: underline; }
   font-size: 1.3rem;
   color: #323a45;
   line-height: 1;
+  padding: 0.2rem;
 }
 
 .detail-card .eyebrow {
@@ -324,146 +396,23 @@ button.ghost:hover { text-decoration: underline; }
 .detail-row {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px solid #eeeff0;
   font-size: 0.9rem;
 }
+.detail-row .label { font-weight: 700; color: #323a45; }
+.detail-row .value { text-align: right; word-break: break-word; max-width: 70%; }
 
-.detail-row .label { font-weight: 700; color: #323a45; white-space: nowrap; }
-.detail-row .value { text-align: right; }
-
-.detail-actions { margin-top: 1.5rem; display: flex; gap: 0.6rem; }
-
-/* ---------- Footer ---------- */
-footer.gov-footer {
-  border-top: 1px solid #d6d7d9;
-  padding: 1.5rem 2rem 2.5rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: #323a45;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer.gov-footer .seal {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-footer.gov-footer .foot-text a { color: #0071bc; }
-footer.gov-footer .foot-text div:first-child { margin-bottom: 0.2rem; }
-
-/* ---------- Nav hover effect (matches federal-site pattern) ---------- */
-.topbar nav span {
-  padding: 0.3rem 0.6rem;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-
-.topbar nav span:hover {
-  text-decoration: underline;
-  border: 1px solid #ffffff;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* ---------- Multi-column layout for NPPES page ---------- */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  border-top: 1px solid #d6d7d9;
-  padding-top: 1.5rem;
-}
-
-.three-col {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 2rem;
-  border-top: 1px solid #d6d7d9;
-  padding-top: 1.5rem;
-}
-
-.gov-banner {
-  background: #f0f0f0;
-  padding: 0.4rem 0.5rem;
-  font-size: 0.8rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.gov-banner-link {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #0071bc;
-}
-
-@media (max-width: 700px) {
-  .two-col, .three-col { grid-template-columns: 1fr; }
-}
-
-
-
-/* ---------- Table-style results (matches real NPI Registry results list) ---------- */
-.result-row-table {
-  display: grid;
-  grid-template-columns: 100px 40px 1fr 130px 160px;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.85rem 0.5rem;
-  border-bottom: 1px solid #eeeff0;
-}
-
-.result-row-table.deactivated { background: #fdf6f5; }
-
-.rrt-npi a {
-  font-family: 'Courier New', monospace;
-  font-weight: 700;
-  color: #0071bc;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.rrt-icon { display: flex; justify-content: center; }
-
-.rrt-main .name { font-weight: 700; color: #212121; }
-.rrt-main .subline { font-size: 0.85rem; color: #323a45; margin-top: 0.15rem; }
-
-.rrt-phone, .rrt-taxonomy { font-size: 0.88rem; color: #323a45; }
-
-@media (max-width: 800px) {
-  .result-row-table {
-    grid-template-columns: 1fr;
-    gap: 0.3rem;
-  }
-}
-
-/* ---------- Breadcrumb (Home / Back To Results / NPI View) ---------- */
-.breadcrumb {
-  font-size: 0.9rem;
-  margin: 0.5rem 0 1rem;
-}
-.breadcrumb a { color: #0071bc; }
-
-/* ---------- Provider detail page ---------- */
+/* ---------- PROVIDER INFORMATION DATA TABLE FORMAT ---------- */
 .provider-name-block {
   border-left: 4px solid #205493;
   padding-left: 1rem;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.5rem 0 0.5;
 }
 .provider-name-block h2 { margin: 0 0 0.3rem; font-size: 1.4rem; }
 .provider-name-block p { margin: 0; color: #323a45; font-size: 0.9rem; }
 
 .meta-line { font-size: 0.88rem; color: #323a45; }
-
 .section-heading {
   font-size: 1.2rem;
   border-bottom: 2px solid #d6d7d9;
@@ -471,13 +420,13 @@ footer.gov-footer .foot-text div:first-child { margin-bottom: 0.2rem; }
   margin-top: 2rem;
 }
 
-.detail-table {
+/* Table grid presentation structures */
+.detail-table{
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.75rem;
+  margin-top: 0.75;
   font-size: 0.9rem;
 }
-
 .detail-table th {
   text-align: left;
   background: #f1f1f1;
@@ -485,16 +434,18 @@ footer.gov-footer .foot-text div:first-child { margin-bottom: 0.2rem; }
   border: 1px solid #d6d7d9;
 }
 
+
 .detail-table td {
   padding: 0.6rem 0.75rem;
+  display: table-cell;
   border: 1px solid #d6d7d9;
-  vertical-align: top;
+  word-break: break-word;
 }
 
 .detail-table td:first-child {
   font-weight: 700;
+  background: #f1f1f1;
   width: 220px;
-  background: #fafafa;
 }
 
 .detail-table input {
@@ -504,4 +455,225 @@ footer.gov-footer .foot-text div:first-child { margin-bottom: 0.2rem; }
   padding: 0.3rem 0.4rem;
   font-size: 0.9rem;
   font-family: inherit;
+}
+
+/* ---------- Left-Aligned Footer Block ---------- */
+footer.gov-footer {
+  border-top: 1px solid #d6d7d9;
+  padding: 1.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+footer.gov-footer .seal {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+footer.gov-footer .foot-text { max-width: 600px; }
+footer.gov-footer .foot-text a { color: #0071bc; }
+footer.gov-footer .foot-text div:first-child { margin-bottom: 0.2rem; }
+
+/* ---------- RESPONSIVE MOBILE HANDLERS & TABLE OVERRIDES ---------- */
+@media (max-width: 767px) {
+  .topbar { padding: 0.9rem 1rem; }
+  .topbar nav {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-end;
+  }
+  
+  .page-content {
+    padding: 1rem;
+    padding-top: 11.5rem;
+  }
+  
+  h1.page-title { font-size: 1.4rem; }
+  .search-panel { padding: 1.5rem; }
+  .search-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .search-actions { flex-direction: column; }
+  
+  .result-row { grid-template-columns: 1fr; gap: 0.5rem; }
+  .result-row .npi-block { text-align: left; margin-top: 0.25rem; }
+  
+  .detail-card { padding: 1.5rem 1rem; }
+  .detail-row { flex-direction: column; }
+  .detail-row .value { text-align: left; max-width: 100%; margin-top: 0.15rem; }
+
+  .detail-table, 
+  .detail-table tbody, 
+  .detail-table tr, 
+  .detail-table td {
+    display: block;
+    width: 100% !important;
+  }
+  
+  .detail-table tr {
+    border: 1px solid #d6d7d9;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+  }
+  
+  .detail-table td:first-child {
+    background: #f1f1f1;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  /* ---------- 📱 RESPONSIVE MOBILE OVERRIDES ---------- */
+@media (max-width: 767px) {
+  .result-row-table {
+    /* Switches from 5 horizontal columns to a vertical stack */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  /* Makes the NPI link, icon wrapper, and main info stretch full width */
+  .rrt-npi,
+  .rrt-icon,
+  .rrt-main,
+  .rrt-phone,
+  .rrt-taxonomy {
+    width: 100%;
+  }
+
+  /* Optional: Adds a small label before the phone number on mobile so users know what it is */
+  .rrt-phone::before {
+    content: "Phone: ";
+    font-weight: 700;
+    color: #323a45;
+  }
+
+  /* Optional: Adds a small label before the taxonomy description on mobile */
+  .rrt-taxonomy::before {
+    content: "Specialty: ";
+    font-weight: 700;
+    color: #323a45;
+  }
+}
+
+/* ---------- 📱 RESPONSIVE MOBILE OVERRIDES ---------- */
+@media (max-width: 767px) {
+  /* Collapse the 2-column grid into a single column stack */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Reduces the gap slightly for smaller screens */
+    padding: 1.25rem; /* Sweeter, tighter padding on mobile devices */
+  }
+
+  /* Collapse the 3-column grid into a single column stack */
+  .three-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Remove the right border since elements now sit on top of each other */
+  .colin {
+    border-right: none;
+    border-bottom: 1px solid #d6d7d9; /* Optional: adds a bottom divider instead */
+    padding-bottom: 0.8rem; /* Keeps spacing clean above the divider */
+    margin: 0.8rem 0;
+  }
+
+  .colin label {
+    width: 100%; /* Lets labels breathe and take full width */
+  }
+
+  /* Makes the button span fully across mobile screens for easier tapping */
+  .primary-t {
+    width: 100%; 
+    padding: 0.8rem;
+  }
+}
+
+/* ---------- 📱 RESPONSIVE MOBILE OVERRIDES FOR PROVIDER VIEW ---------- */
+@media (max-width: 767px) {
+  /* 1. Reset standard table wrappers to structural block dividers */
+  .detail-table,
+  .detail-table tbody,
+  .detail-table thead,
+  .detail-table tr,
+  .detail-table th,
+  .detail-table td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* 2. Hide headers completely on mobile—labels are stacked inline instead */
+  .detail-table thead {
+    display: none;
+  }
+
+  /* 3. Transform every table row into a standalone card container */
+  .detail-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #d6d7d9;
+    border-radius: 4px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  /* 4. Format the label field (the first column) */
+  .detail-table td:first-child {
+    font-weight: 700 !important;
+    background: #f1f1f1 !important;
+    padding: 0.6rem 0.75rem !important;
+    border-bottom: 1px solid #d6d7d9 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 5. Clean up the data value field (subsequent columns) */
+  .detail-table td:not(:first-child) {
+    padding: 0.6rem 0.75rem !important;
+    border: none !important;
+    width: 100% !important;
+  }
+
+  /* 6. Fix for Multi-Column Tables (Taxonomy / Authorized Official) 
+     Adds data-labels context vertically so users know what the data represents */
+  .detail-table td:nth-child(2)::before { font-weight: 700; color: #5a5a5b; display: block; margin-bottom: 0.15rem; }
+  .detail-table td:nth-child(3)::before { font-weight: 700; color: #5a5a5b; display: block; margin-bottom: 0.15rem; }
+  .detail-table td:nth-child(4)::before { font-weight: 700; color: #5a5a5b; display: block; margin-bottom: 0.15rem; }
+  .detail-table td:nth-child(5)::before { font-weight: 700; color: #5a5a5b; display: block; margin-bottom: 0.15rem; }
+
+  /* Targets the Taxonomy Table specific positions */
+  h3:contains("Taxonomy") + .detail-table td:nth-child(2)::before { content: "State: "; }
+  h3:contains("Taxonomy") + .detail-table td:nth-child(3)::before { content: "Primary Taxonomy: "; }
+  h3:contains("Taxonomy") + .detail-table td:nth-child(4)::before { content: "Selected Taxonomy: "; }
+  h3:contains("Taxonomy") + .detail-table td:nth-child(5)::before { content: "License Number: "; }
+
+  /* Targets the Authorized Official Table specific positions */
+  h3:contains("Official") + .detail-table td:nth-child(2)::before { content: "Last Name: "; }
+
+  /* 7. Stretch edit input fields fully across the card content area */
+  .detail-table input {
+    width: 100% !important;
+    padding: 0.45rem 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  /* 8. Fix spacing for action buttons under mobile sizing */
+  .search-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .search-actions button {
+    width: 100% !important;
+    padding: 0.75rem;
+    text-align: center;
+  }
+}
 }

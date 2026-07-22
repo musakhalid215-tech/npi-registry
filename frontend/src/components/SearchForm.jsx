@@ -116,8 +116,8 @@ export default function SearchForm({ filters, setFilters, onSearch, states, taxo
       </p>
 
       <div className="search-actions">
-        <button type="button" className="ghost" onClick={onReset}>Clear</button>
-        <button type="submit" className="primary">Search</button>
+        <button type="button" className="host" onClick={onReset}>Clear</button>
+        <button type="submit" className="mary">Search</button>
       </div>
     </form>
   );
