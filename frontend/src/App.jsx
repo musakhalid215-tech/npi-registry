@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { api } from "./api";
 import SearchForm from "./components/SearchForm";
 import ResultsList from "./components/ResultsList";
-import NppesPage from "./pages/NppesPage";
+import NppesPage from "./pages/nppespage";
 import DownloadsPage from "./pages/DownloadsPage";
 import ApiPage from "./pages/ApiPage";
 import HelpPage from "./pages/HelpPage";
