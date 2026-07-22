@@ -177,9 +177,13 @@ export default function App() {
               standard way throughout their industry.
             </p>
             <p>
-              This is a local prototype and is not affiliated with or endorsed by CMS. Data shown is whatever
-              you've imported into your own local database.
+              Individuals or organizations apply for NPIs through the CMS National Plan and Provider Enumeration System
+              {" "} <a href="#">(NPPES)</a>. After we supply an NPI, we publish the parts of the NPI record that have public relevance, including the provider's name, specialty (taxonomy) and practice address.
             </p>
+
+            <p>CMS provides this service based on federal law (45 CFR Part 162). We also supply this directory in a <a href="#"> full download</a> file, 
+              or through an <a href="#"> Application Programming Interface (API)</a>.</p>
+              <p>If you are a provider with questions about your record, our Enumerator can assist you: 800.465.3203 | 800.692.2326 TTY |<a href="#">email.</a> </p>
           </div>
         </div>
       )}
@@ -212,9 +216,11 @@ export default function App() {
       )}
 
       <footer className="gov-footer">
-        <div className="seal">HHS</div>
+        <img src="/logo.png" alt="logo" className="seal"/>
         <div className="foot-text">
-          <div>A federal-style layout for local prototyping — managed by no one.</div>
+          <div>A federal website managed by the</div>
+          <a href="#">U.S. centersb for medicare and medicaid services</a>
+          <div>7500 Security Boulevard, Baltimore, MD 21244</div>
         </div>
       </footer>
     </div>

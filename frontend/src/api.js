@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = "https://npi-registry.onrender.com/api";
 
 async function handle(res) {
   if (res.status === 204) return null;

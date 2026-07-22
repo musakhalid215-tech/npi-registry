@@ -192,9 +192,11 @@ button.ghost:hover { text-decoration: underline; }
   font-size: 0.92rem;
   line-height: 1.6;
   color: #212121;
+  font-size: 1rem;
+  width: 80%;
+  margin: 2.3rem;
 }
 
-.about-block p { margin: 0 0 1rem; }
 
 /* ---------- Results ---------- */
 .results-header {
@@ -336,7 +338,6 @@ button.ghost:hover { text-decoration: underline; }
 /* ---------- Footer ---------- */
 footer.gov-footer {
   border-top: 1px solid #d6d7d9;
-  margin-top: 3rem;
   padding: 1.5rem 2rem 2.5rem;
   display: flex;
   align-items: flex-start;
@@ -351,15 +352,8 @@ footer.gov-footer {
 footer.gov-footer .seal {
   width: 46px;
   height: 46px;
-  border-radius: 50%;
-  border: 2px solid #323a45;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.6rem;
-  text-align: center;
-  color: #323a45;
+  object-fit: cover;
 }
 
 footer.gov-footer .foot-text a { color: #0071bc; }
